@@ -7,11 +7,44 @@
 <ion-content>
   <ion-list>
     <ion-item>
-      <h1>Presentation</h1>
-      <ion-item *ngFor="let item of items" (click)="goToFicheFilm(item.id)"> <!--click = onclick appel fonction qui redirige-->
-        {{item.presentation}} <!-- titres des films-->
-        <img src={{item.icon}} slot="end"/> <!-- images des films, slot end pour les mettre en bout de ligne-->
+      <table>
+        <tr>
+          <td>
+            <h1 class="titre">Presentation :</h1>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ion-item *ngFor="let item of items" (click)="goToFicheFilm(item.id)"> <!--click = onclick appel fonction qui redirige-->
+              {{item.presentation}} <!-- titres des films-->
+            </ion-item>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h1 class="titre">Activités :</h1>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ion-item *ngFor="let item of items" (click)="goToFicheFilm(item.id)"> <!--click = onclick appel fonction qui redirige-->
+              {{item.activites}} <!-- titres des films-->
+            </ion-item>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h1 class="titre">Sur le poste :</h1>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ion-item *ngFor="let item of items" (click)="goToFicheFilm(item.id)"> <!--click = onclick appel fonction qui redirige-->
+              {{item.surleposte}} <!-- titres des films-->
+            </ion-item>
+          </td>
+        </tr>
+      </table>
       </ion-item>
-    </ion-item>
   </ion-list>
 </ion-content>
