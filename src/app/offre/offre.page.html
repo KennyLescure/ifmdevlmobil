@@ -7,41 +7,76 @@
 <ion-content>
   <ion-list>
     <ion-item>
-      <table>
+      <table border="1">
         <tr>
           <td>
-            <h1 class="titre">Presentation :</h1>
+            <ion-icon name="person-circle-outline" slot="start" id="photo"></ion-icon>
+          </td>
+          <td>
+            <table border="1">
+              <ion-item *ngFor="let item of items">
+                <tr>
+                  <td id="nomentreprise">
+                    {{item.nomentreprise}}
+                  </td>
+                </tr>
+                <tr>
+                  <td id="nomposte">
+                    {{item.nomposte}}
+                  </td>
+                </tr>
+                <tr>
+                  <td id="cpville">
+                    {{item.codepostal}}
+                    {{item.ville}}
+                  </td>
+                </tr>
+              </ion-item>
+            </table>
           </td>
         </tr>
         <tr>
-          <td>
+          <td colspan="2">
+            <h1 class="titre">Presentation :</h1>
+          </td>
+        </tr>
+        <tr class="spaceUnder">
+          <td colspan="2">
             <ion-item *ngFor="let item of items" (click)="goToFicheFilm(item.id)"> <!--click = onclick appel fonction qui redirige-->
               {{item.presentation}} <!-- titres des films-->
             </ion-item>
           </td>
         </tr>
         <tr>
-          <td>
+          <td colspan="2">
             <h1 class="titre">Activités :</h1>
           </td>
         </tr>
-        <tr>
-          <td>
+        <tr class="spaceUnder">
+          <td colspan="2">
             <ion-item *ngFor="let item of items" (click)="goToFicheFilm(item.id)"> <!--click = onclick appel fonction qui redirige-->
               {{item.activites}} <!-- titres des films-->
             </ion-item>
           </td>
         </tr>
         <tr>
-          <td>
+          <td colspan="2">
             <h1 class="titre">Sur le poste :</h1>
           </td>
         </tr>
-        <tr>
-          <td>
+        <tr class="spaceUnder">
+          <td colspan="2">
             <ion-item *ngFor="let item of items" (click)="goToFicheFilm(item.id)"> <!--click = onclick appel fonction qui redirige-->
               {{item.surleposte}} <!-- titres des films-->
             </ion-item>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+        <tr colspan="2" class="spaceUnder">
+          <td id="center" colspan="2">
+              <input type="button" id="postuler" name="postuler" value="POSTULER A L'OFFRE"/>
           </td>
         </tr>
       </table>
