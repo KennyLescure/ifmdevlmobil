@@ -10,7 +10,7 @@ export class OffrePage implements OnInit {
   public items: Array<{presentation: string, activites: string, surleposte: string}> = [];
   constructor() { 
     this.items.push({
-    presentation : "presentation ",
+    presentation : "presssssentation ",
     activites : "activite",
     surleposte : "surleposte",
     })

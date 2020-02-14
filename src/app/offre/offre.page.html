@@ -8,9 +8,10 @@
   <ion-list>
     <ion-item>
       <h1>Presentation</h1>
-      {{item.presentation}} <!-- contenu variable-->
-      {{item.activites}}
-      {{item.surleposte}}
+      <ion-item *ngFor="let item of items" (click)="goToFicheFilm(item.id)"> <!--click = onclick appel fonction qui redirige-->
+        {{item.presentation}} <!-- titres des films-->
+        <img src={{item.icon}} slot="end"/> <!-- images des films, slot end pour les mettre en bout de ligne-->
+      </ion-item>
     </ion-item>
   </ion-list>
 </ion-content>
